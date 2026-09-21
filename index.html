@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>idojarasos</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Időjárás</title>
   </head>
   <body>
-    <div id="app"></div>
+    <h1 class="mb-5">Időjárás</h1>
+    <table class="table mb-5">
+      <thead>
+        <tr>
+          <th>Nap</th>
+          <th>Hőmérséklet</th>
+        </tr>
+      </thead>
+      <tbody id="table"></tbody>
+    </table>
+
+    <h1>Új előrejelzés</h1>
+    <form class="mb-5" id="felvetelForm">
+      <div class="form-group mb-3">
+        <label for="temp">Hőmérséklet: </label>
+        <input class="form-control" type="number" name="temp">
+      </div>
+      <button id="submit" class="btn btn-primary" type="submit">Hozzáadás</button>
+    </form>
+
+    <button class="btn btn-primary" id="export">Exportálás</button>
+    <textarea class="form-control" id="exportArea"></textarea>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
